@@ -23,11 +23,6 @@ import com.jayway.restassured.path.json.JsonPath;
 import com.jayway.restassured.specification.RequestSpecification;
 import com.jayway.restassured.specification.ResponseSpecification;
 
-
-/**
- * Util for RestAssured tests.
- * This class here in src/integrationTest is copy/pasted to src/test; please keep them in sync.
- */
 @SuppressWarnings("unchecked")
 public class Utils {
 
@@ -38,7 +33,7 @@ public class Utils {
     public static void initializeRESTAssured() {
         RestAssured.baseURI = "https://localhost";
         RestAssured.port = 8443;
-        RestAssured.keystore("src/main/resources/keystore.jks", "openmf");
+        RestAssured.keystore("../keystore.jks", "openmf");
     }
 
     public static String loginIntoServerAndGetBase64EncodedAuthenticationKey() {
